@@ -1,4 +1,3 @@
-// components/user/Container.js
 import React from "react";
 import { Paper } from "@material-ui/core";
 import { useNode } from "@craftjs/core";

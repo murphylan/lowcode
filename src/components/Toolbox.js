@@ -11,21 +11,21 @@ export const Toolbox = () => {
 
   return (
     <Box px={2} py={2}>
-      <Grid container direction="column" alignItems="center" justifyContent="center" spacing={1}>
+      <Grid container direction="column" alignItems="center" justify="center" spacing={1}>
         <Box pb={2}>
           <Typography>拖动以添加</Typography>
         </Box>
         <Grid container direction="column" item>
-          <MaterialButton ref={ref => connectors.create(ref, <Button text="点击我" size="small" />)} variant="contained">按钮</MaterialButton>
+          <MaterialButton ref={ref => connectors.create(ref, <Button size="small" >Click me</Button>)} variant="contained">Button</MaterialButton>
         </Grid>
         <Grid container direction="column" item>
-          <MaterialButton ref={ref => connectors.create(ref, <Text text="你好，世界" />)} variant="contained">文本</MaterialButton>
+          <MaterialButton ref={ref => connectors.create(ref, <Text text="Hi world" />)} variant="contained">Text</MaterialButton>
         </Grid>
         <Grid container direction="column" item>
-          <MaterialButton ref={ref => connectors.create(ref, <Element is={Container} padding={20} canvas />)} variant="contained">容器</MaterialButton>
+          <MaterialButton ref={ref => connectors.create(ref, <Element is={Container} padding={20} canvas />)} variant="contained">Container</MaterialButton>
         </Grid>
         <Grid container direction="column" item>
-          <MaterialButton ref={ref => connectors.create(ref, <Card />)} variant="contained">卡片</MaterialButton>
+          <MaterialButton ref={ref => connectors.create(ref, <Card />)} variant="contained">Card</MaterialButton>
         </Grid>
       </Grid>
     </Box>

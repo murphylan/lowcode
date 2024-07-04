@@ -25,7 +25,7 @@ export const Topbar = () => {
               console.log(query.serialize())
             }}
           >
-            Serialize JSON to console
+            序列化 JSON to console
           </MaterialButton>
         </Grid>
       </Grid>

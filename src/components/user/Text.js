@@ -66,7 +66,8 @@ const TextSettings = () => {
 Text.craft = {
   props: {
     text: "Hi",
-    fontSize: 20
+    fontSize: 20,
+    textAlign: "left"
   },
   related: {
     settings: TextSettings

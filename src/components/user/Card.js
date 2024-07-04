@@ -3,7 +3,8 @@ import { Text } from "./Text";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { useNode, Element } from "@craftjs/core";
-import { ContainerSettings, ContainerDefaultProps } from "./Container";
+import { ContainerDefaultProps } from "./Container";
+
 
 // 注意 CardTop 和 CardBottom 没有指定拖动连接器，因为我们不会将这些组件用作可拖动组件；添加拖动处理程序将毫无意义。
 
@@ -47,7 +48,7 @@ export const Card = ({ background, padding = 20 }) => {
         <Text text="Subtitle" fontSize={15} />
       </Element>
       <Element id="buttons" is={CardBottom} canvas> // 类型为 CardBottom 的 Canvas 节点
-        <Button size="small" text="Learn more" />
+        <Button size="small" >Learn more</Button>
       </Element>
     </Container>
   )
@@ -55,8 +56,4 @@ export const Card = ({ background, padding = 20 }) => {
 
 Card.craft = {
   props: ContainerDefaultProps,
-  related: {
-    // Since Card has the same settings as Container, we'll just reuse ContainerSettings 
-    settings: ContainerSettings
-  }
-}
+};

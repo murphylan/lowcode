@@ -31,19 +31,6 @@ export const SettingsPanel = () => {
               <Grid item><Chip size="small" color="primary" label="Selected" /></Grid>
             </Grid>
           </Box>
-          {
-            selected.isDeletable ? (
-              <MaterialButton
-                variant="contained"
-                color="default"
-                onClick={() => {
-                  actions.delete(selected.id);
-                }}
-              >
-                Delete
-              </MaterialButton>
-            ) : null
-          }
         </Grid>
         <FormControl size="small" component="fieldset">
           <FormLabel component="legend">Prop</FormLabel>
@@ -58,12 +45,19 @@ export const SettingsPanel = () => {
         {
           selected.settings && React.createElement(selected.settings)
         }
-        <MaterialButton
-          variant="contained"
-          color="default"
-        >
-          Delete
-        </MaterialButton>
+        {
+          selected.isDeletable ? (
+            <MaterialButton
+              variant="contained"
+              color="default"
+              onClick={() => {
+                actions.delete(selected.id);
+              }}
+            >
+              Delete
+            </MaterialButton>
+          ) : null
+        }
       </Grid>
     </Box>
   ) : null
