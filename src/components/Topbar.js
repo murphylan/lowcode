@@ -31,8 +31,9 @@ export const Topbar = () => {
             color="secondary"
             onClick={() => {
               const json = query.serialize();
+              console.log(json);
               copy(lz.encodeBase64(lz.compress(json)));
-              setSnackbarMessage("State copied to clipboard");
+              setSnackbarMessage("状态已复制到剪贴板");
             }}
           >
             复制当前状态
@@ -57,7 +58,7 @@ export const Topbar = () => {
               <TextField
                 multiline
                 fullWidth
-                placeholder='Paste the contents that was copied from the "Copy Current State" button'
+                placeholder='粘贴从“复制当前状态”按钮复制的内容'
                 size="small"
                 value={stateToLoad}
                 onChange={e => setStateToLoad(e.target.value)}

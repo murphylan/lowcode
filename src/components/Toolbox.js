@@ -5,6 +5,7 @@ import { Container } from "./user/Container";
 import { Card } from "./user/Card";
 import { Button } from "./user/Button";
 import { Text } from "./user/Text";
+import { CustomForm } from "./user/CustomForm";
 
 export const Toolbox = () => {
   const { connectors, query } = useEditor();
@@ -26,6 +27,9 @@ export const Toolbox = () => {
         </Grid>
         <Grid container direction="column" item>
           <MaterialButton ref={ref => connectors.create(ref, <Card />)} variant="contained">Card</MaterialButton>
+        </Grid>
+        <Grid container direction="column" item>
+          <MaterialButton ref={ref => connectors.create(ref, <CustomForm />)} variant="contained">CustomForm</MaterialButton>
         </Grid>
       </Grid>
     </Box>

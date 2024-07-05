@@ -7,13 +7,14 @@ import { Card, CardTop, CardBottom } from './components/user/Card';
 import { Container } from './components/user/Container';
 import { Button } from './components/user/Button';
 import { Text } from './components/user/Text';
+import { CustomForm, Form, Input, Button as CustomButton } from './components/user/CustomForm';
 import { Editor, Frame, Element } from "@craftjs/core";
 
 export default function App() {
   return (
     <div style={{ margin: "0 auto", width: "100%", maxWidth: "1200px" }}>
       <Typography variant="h5" align="center">低代码编辑器</Typography>
-      <Editor resolver={{ Card, Button, Text, CardTop, CardBottom, Container }}>
+      <Editor resolver={{ Card, Button, Text, CardTop, CardBottom, Container, CustomForm, Form, Input, CustomButton }}>
         <Topbar />
         <Grid container spacing={3} style={{ paddingTop: "10px", height: '80vh' }}>
           <Grid item xs={2} style={{ height: '100%' }}>

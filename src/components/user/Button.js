@@ -2,10 +2,10 @@ import { useNode } from "@craftjs/core";
 import { FormControl, FormControlLabel, FormLabel, Button as MaterialButton, Radio, RadioGroup } from "@material-ui/core";
 import React from "react";
 
-export const Button = ({ size, variant, color, children }) => {
+export const Button = ({ size, variant, color, onClick, children }) => {
   const { connectors: { connect, drag } } = useNode();
   return (
-    <MaterialButton ref={ref => connect(drag(ref))} size={size} variant={variant} color={color}>
+    <MaterialButton ref={ref => connect(drag(ref))} size={size} variant={variant} color={color} onClick={onClick}>
       {children}
     </MaterialButton>
   );
